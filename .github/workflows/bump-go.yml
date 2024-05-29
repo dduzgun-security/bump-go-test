@@ -20,5 +20,5 @@ jobs:
         uses: dduzgun-security/bump-go@f38b822f81af9cd516e6b3635e265b709eca56a2
         with:
           go_version: ".go-version"
-          reviewer: "dduzgun-security"
+          pr_reviewer: "dduzgun-security"
           github_token: ${{ secrets.GITHUB_TOKEN }}
