@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 #v4.1.6
 
       - name: Run bump-go
-        uses: dduzgun-security/bump-go@4e4346f510a679f0f1bec3c0b86abd32a8796bb2
+        uses: dduzgun-security/bump-go@a89513b7f9777235f6d7acf81cfc61bcab3d58ad
         with:
           go_version: ".go-version"
           pr_reviewer: "dduzgun-security"
