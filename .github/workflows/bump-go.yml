@@ -1,0 +1,24 @@
+name: Bump Go Version and stdlibs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 #v4.1.6
+
+      - name: Run bump-go
+        uses: dduzgun-security/bump-go@f38b822f81af9cd516e6b3635e265b709eca56a2
+        with:
+          go_version: ".go-version"
+          reviewer: "dduzgun-security"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
